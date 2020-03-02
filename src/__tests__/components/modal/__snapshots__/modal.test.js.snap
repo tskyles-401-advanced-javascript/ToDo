@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Modal /> renders correctly 1`] = `
+<div
+  className="modal"
+>
+  <div>
+    <header>
+      <span
+        className="title"
+      />
+      <button>
+        X
+      </button>
+    </header>
+    <div />
+  </div>
+</div>
+`;
