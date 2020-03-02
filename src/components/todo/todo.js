@@ -1,14 +1,14 @@
-import React, { useState, useEffect, useContext } from "react";
-import useForm from "../hooks/useForm";
-import { When, If, Then, Else } from "../if";
-import Modal from "../modal";
-import useFetch from "../hooks/useFetch";
-import { SettingsContext } from "../../context/settings";
-import Auth from "../auth/auth";
+import React, { useContext, useEffect, useState } from "react";
 import cookie from "react-cookies";
 import superagent from "superagent";
-
+import { SettingsContext } from "../../context/settings";
+import Auth from "../auth/auth";
+import useFetch from "../hooks/useFetch";
+import useForm from "../hooks/useForm";
+import { Else, If, Then, When } from "../if";
+import Modal from "../modal";
 import "./todo.scss";
+
 
 const ToDo = props => {
   const settingsContext = useContext(SettingsContext);
@@ -20,7 +20,7 @@ const ToDo = props => {
   const [setRequest, response] = useFetch();
 
   const url = "https://todo-backend-lab-32.herokuapp.com/api/v1/todo";
-  const API = process.env.REACT_APP_API;
+  const API = 'https://api-js401.herokuapp.com';
 
   // get data from API on mount
   useEffect(() => {
